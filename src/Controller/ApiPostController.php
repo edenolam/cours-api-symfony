@@ -27,6 +27,7 @@ class ApiPostController extends AbstractController
         // le precessus de serialisation fais les deux en meme temps ->
         //normalisation des donnes = transformer des objets vers tableau assosiatif
         //encodage = transformer tableau assosiatif vers text
+
         return $this->json($postRepository->findAll(), 200, [], ['groups' => 'post:read']);
     }
 
